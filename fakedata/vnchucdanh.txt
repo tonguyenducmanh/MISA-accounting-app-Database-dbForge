@@ -1,0 +1,9 @@
+Giám đốc
+Phó giám đốc
+Trưởng phòng
+Phó phòng
+Nhân viên
+Thực tập sinh
+Chủ tịch
+Kế Toán
+Lập trình viên
