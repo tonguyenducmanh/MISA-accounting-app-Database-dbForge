@@ -1,27 +1,27 @@
 CREATE 
 	DEFINER = 'root'@'localhost'
-PROCEDURE `misa.web08.gpbl.tnmanh`.Proc_employee_InsertOne(IN v_EmployeeCode varchar(20),
-IN v_FullName varchar(100), -- tên nhân viên
-IN v_DateOfBirth datetime, -- ngày sinh nhân viên
-IN v_EmployeeGender tinyint, -- giới tính nhân viên
-IN v_IdentityCard varchar(25), -- căn cước công dân/ chứng minh thư nhân viên
-IN v_IdentityDate datetime, -- ngày cấp căn cước công dân / chứng minh thư
-IN v_IdentityPlace varchar(255), -- nơi cấp căn cước công dân / chứng minh thư
-IN v_Address varchar(255), -- địa chỉ nhân viên
-IN v_PNumRelative varchar(50), -- số điện thoại cá nhân
-IN v_PNumFix varchar(50), -- số điện thoại cố định
-IN v_Email varchar(100), -- email nhân viên
-IN v_BankAccount varchar(25), -- tài khoản ngân hàng
-IN v_BankName varchar(255), -- tên ngân hàng
-IN v_BankBranch varchar(255), -- chi nhánh ngân hàng
-IN v_DepartmentID char(36), -- id đơn vị
-IN v_DepartmentName varchar(255), -- tên đơn vị
-IN v_PositionID char(36), -- id chức danh
-IN v_PositionName varchar(255), -- tên chức danh
-IN v_CreatedDate datetime, -- ngày tạo nhân viên
-IN v_CreatedBy varchar(100), -- người tạo nhân viên
-IN v_ModifiedDate datetime,  -- ngày sửa nhân viên gần nhất
-IN v_ModifiedBy varchar(100))
+PROCEDURE `misa.web08.gpbl.tnmanh`.Proc_employee_InsertOne(IN v_EmployeeID char(36), -- ID nhân viên 
+IN v_EmployeeCode VARCHAR(20), IN v_FullName VARCHAR(100), -- tên nhân viên
+IN v_DateOfBirth DATETIME, -- ngày sinh nhân viên
+IN v_EmployeeGender TINYINT, -- giới tính nhân viên
+IN v_IdentityCard VARCHAR(25), -- căn cước công dân/ chứng minh thư nhân viên
+IN v_IdentityDate DATETIME, -- ngày cấp căn cước công dân / chứng minh thư
+IN v_IdentityPlace VARCHAR(255), -- nơi cấp căn cước công dân / chứng minh thư
+IN v_Address VARCHAR(255), -- địa chỉ nhân viên
+IN v_PNumRelative VARCHAR(50), -- số điện thoại cá nhân
+IN v_PNumFix VARCHAR(50), -- số điện thoại cố định
+IN v_Email VARCHAR(100), -- email nhân viên
+IN v_BankAccount VARCHAR(25), -- tài khoản ngân hàng
+IN v_BankName VARCHAR(255), -- tên ngân hàng
+IN v_BankBranch VARCHAR(255), -- chi nhánh ngân hàng
+IN v_DepartmentID CHAR(36), -- id đơn vị
+IN v_DepartmentName VARCHAR(255), -- tên đơn vị
+IN v_PositionID CHAR(36), -- id chức danh
+IN v_PositionName VARCHAR(255), -- tên chức danh
+IN v_CreatedDate DATETIME, -- ngày tạo nhân viên
+IN v_CreatedBy VARCHAR(100), -- người tạo nhân viên
+IN v_ModifiedDate DATETIME, -- ngày sửa nhân viên gần nhất
+IN v_ModifiedBy VARCHAR(100))
     COMMENT '
   -- Author: TNMANH
   -- Created date: 15/09/2022
@@ -34,6 +34,6 @@ IN v_ModifiedBy varchar(100))
   '
 BEGIN
   INSERT employee (EmployeeID, EmployeeCode, FullName, DateOfBirth, EmployeeGender, IdentityCard, IdentityPlace, Address, PNumRelative, PNumFix, Email, BankAccount, BankName, BankBranch, DepartmentID, DepartmentName, PositionID, PositionName, CreatedDate, CreatedBy, ModifiedDate, ModifiedBy)
-  VALUES (UUID(), v_EmployeeCode, v_FullName, v_DateOfBirth, v_EmployeeGender, v_IdentityCard, v_IdentityPlace, v_Address, v_PNumRelative, v_PNumFix, v_Email, v_BankAccount, v_BankName, v_BankBranch, v_DepartmentID, v_DepartmentName, v_PositionID, v_PositionName, v_CreatedDate, v_CreatedBy, v_ModifiedDate, v_ModifiedBy);
+  VALUES (v_EmployeeID, v_EmployeeCode, v_FullName, v_DateOfBirth, v_EmployeeGender, v_IdentityCard, v_IdentityPlace, v_Address, v_PNumRelative, v_PNumFix, v_Email, v_BankAccount, v_BankName, v_BankBranch, v_DepartmentID, v_DepartmentName, v_PositionID, v_PositionName, v_CreatedDate, v_CreatedBy, v_ModifiedDate, v_ModifiedBy);
 
 END
