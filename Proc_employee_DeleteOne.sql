@@ -1,4 +1,4 @@
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Proc_employee_DeleteOne`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `misa.web08.gpbl.tnmanh`.Proc_employee_DeleteOne(
 IN v_Id char(36) -- id của employee muốn xóa
 )
     COMMENT '

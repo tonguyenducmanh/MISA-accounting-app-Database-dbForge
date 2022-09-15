@@ -1,4 +1,4 @@
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Proc_employee_DetailOne`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `misa.web08.gpbl.tnmanh`.Proc_employee_DetailOne(
 IN v_id char(36) -- Id dùng để lấy thông tin chi tiết của 1 người
 )
     COMMENT '
@@ -10,7 +10,8 @@ IN v_id char(36) -- Id dùng để lấy thông tin chi tiết của 1 người
   '
 BEGIN
   SET @getOneQuery = CONCAT('
-  SELECT e.EmployeeCode, 
+  SELECT e.EmployeeID,
+  e.EmployeeCode, 
   e.FullName, 
   e.EmployeeGender, 
   e.DateOfBirth, 

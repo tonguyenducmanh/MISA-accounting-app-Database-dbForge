@@ -1,4 +1,4 @@
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Proc_employee_GetPaging`(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `misa.web08.gpbl.tnmanh`.Proc_employee_GetPaging(
 IN v_Offset int, -- Thứ tự bản ghi bắt đầu lấy
 IN v_Limit int, -- Số bản ghi muốn lấy
 IN v_Sort varchar(100), -- Điều kiện sắp xếp
@@ -30,9 +30,9 @@ BEGIN
 
   -- kiểm tra xem giá trị v_Limit có = -1 không, hiểu ngầm trong công ty bằng -1 là k có limit
   IF v_Limit = -1 THEN
-    SET @filterQuery = CONCAT('SELECT e.EmployeeCode, e.FullName, e.EmployeeGender, e.DateOfBirth, e.IdentityCard, e.PositionName, e.DepartmentName, e.BankAccount, e.BankName FROM employee e WHERE ', v_Where, ' ORDER BY ', v_Sort);
+    SET @filterQuery = CONCAT('SELECT e.EmployeeID, e.EmployeeCode, e.FullName, e.EmployeeGender, e.DateOfBirth, e.IdentityCard, e.PositionName, e.DepartmentName, e.BankAccount, e.BankName FROM employee e WHERE ', v_Where, ' ORDER BY ', v_Sort);
   ELSE
-    SET @filterQuery = CONCAT('SELECT e.EmployeeCode, e.FullName, e.EmployeeGender, e.DateOfBirth, e.IdentityCard, e.PositionName, e.DepartmentName, e.BankAccount, e.BankName FROM employee e WHERE ', v_Where, ' ORDER BY ', v_Sort, ' LIMIT ', v_Limit, ' OFFSET ', v_Offset);
+    SET @filterQuery = CONCAT('SELECT e.EmployeeID, e.EmployeeCode, e.FullName, e.EmployeeGender, e.DateOfBirth, e.IdentityCard, e.PositionName, e.DepartmentName, e.BankAccount, e.BankName FROM employee e WHERE ', v_Where, ' ORDER BY ', v_Sort, ' LIMIT ', v_Limit, ' OFFSET ', v_Offset);
   END IF;
 
   -- @filterQuery là 1 biến có kiểu dữ liệu là string
