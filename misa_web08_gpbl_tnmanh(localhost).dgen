@@ -471,7 +471,7 @@
         <RowsToGenerate>0</RowsToGenerate>
         <PopulationDetails>
           <PopulationType>RowsCount</PopulationType>
-          <RowsCount>1000</RowsCount>
+          <RowsCount>500</RowsCount>
           <LookupProportion>30</LookupProportion>
           <ProportionOfExistingData>10</ProportionOfExistingData>
           <TimeTicksToPopulate>100000000</TimeTicksToPopulate>
@@ -607,6 +607,25 @@
             <MaxValue>2</MaxValue>
             <UseDefault>false</UseDefault>
             <DefaultValue>NULL</DefaultValue>
+          </GeneratorOptions>
+          <GeneratorType>MySqlTinyIntegerGenerator</GeneratorType>
+          <GeneratorName>tinyint</GeneratorName>
+          <GeneratorDescription>fill with 8-bit signed integer values</GeneratorDescription>
+        </Column>
+        <Column Name="EmployeeType">
+          <Checked>true</Checked>
+          <DataType>TINYINT</DataType>
+          <GeneratorOptions p6:type="MySqlTinyIntegerGeneratorOptions" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance">
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Increment xmlns:q2="http://www.w3.org/2001/XMLSchema" p6:type="q2:int">1</Increment>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>4</SeedValue>
+            <MinValue>0</MinValue>
+            <MaxValue>2</MaxValue>
+            <UseDefault>false</UseDefault>
           </GeneratorOptions>
           <GeneratorType>MySqlTinyIntegerGenerator</GeneratorType>
           <GeneratorName>tinyint</GeneratorName>
