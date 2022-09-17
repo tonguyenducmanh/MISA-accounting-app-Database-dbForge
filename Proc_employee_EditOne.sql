@@ -4,6 +4,7 @@ PROCEDURE `misa.web08.gpbl.tnmanh`.Proc_employee_EditOne(IN v_EmployeeID char(36
 IN v_EmployeeCode varchar(20), IN v_FullName varchar(100), -- tên nhân viên
 IN v_DateOfBirth datetime, -- ngày sinh nhân viên
 IN v_EmployeeGender tinyint, -- giới tính nhân viên
+IN v_EmployeeType tinyint, -- loại nhân viên, là khách hàng hay là nhà cung cấp
 IN v_IdentityCard varchar(25), -- căn cước công dân/ chứng minh thư nhân viên
 IN v_IdentityDate datetime, -- ngày cấp căn cước công dân / chứng minh thư
 IN v_IdentityPlace varchar(255), -- nơi cấp căn cước công dân / chứng minh thư
@@ -39,6 +40,7 @@ BEGIN
       FullName = v_FullName,
       DateOfBirth = v_DateOfBirth,
       EmployeeGender = v_EmployeeGender,
+      EmployeeType = v_EmployeeType,
       IdentityCard = v_IdentityCard,
       IdentityPlace = v_IdentityDate,
       Address = v_Address,

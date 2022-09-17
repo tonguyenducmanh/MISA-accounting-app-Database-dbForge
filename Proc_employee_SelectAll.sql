@@ -12,6 +12,7 @@ BEGIN
     EmployeeCode,
     FullName,
     EmployeeGender,
+    EmployeeType,
     DateOfBirth,
     IdentityCard,
     IdentityPlace,
