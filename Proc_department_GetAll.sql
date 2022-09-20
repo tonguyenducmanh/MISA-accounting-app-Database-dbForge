@@ -1,10 +1,18 @@
-CREATE DEFINER=`root`@`localhost` PROCEDURE `misa.web08.gpbl.tnmanh`.Proc_department_SelectAll()
-    COMMENT '
+USE `misa.web08.gpbl.tnmanh`;
+
+DROP PROCEDURE IF EXISTS Proc_department_GetAll;
+
+DELIMITER $$
+
+CREATE
+DEFINER = 'root'@'localhost'
+PROCEDURE Proc_department_GetAll ()
+COMMENT '
   -- Author: TNMANH
   -- Created date: 15/09/2022
   -- Description: Lấy toàn bộ danh sách bản ghi trong department
   -- Modified by:
-  -- Code chạy thử Call Proc_department_SelectAll();
+  -- Code chạy thử Call Proc_department_GetAll();
   '
 BEGIN
   SELECT
@@ -14,3 +22,6 @@ BEGIN
     Description
   FROM department;
 END
+$$
+
+DELIMITER ;

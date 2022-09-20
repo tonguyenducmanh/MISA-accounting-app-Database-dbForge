@@ -13,13 +13,13 @@ bảng 1 là bảng nhân viên
 * EmployeeCode (varchar(20)) - not NULL - mã nhân vinee
 * FullName (varchar(100)) - not NULL - tên
 * DateOfBirth (datetime) - ngày sinh
-* EmployeeGender (tinyint) - giới tính
+* Gender (tinyint) - giới tính
 * IdentityCard (varchar(25)) - căn cước
 * IdentityDate (datetime) - ngày cấp
 * IdentityPlace (varchar(255)) - nơi cấp
 * Address (varchar(255)) - địa chỉ
-* PNumRelative (varchar(50)) - số đt cá nhân
-* PNumFix (varchar(50)) - số đt cố định
+* PhoneNumberRelative (varchar(50)) - số đt cá nhân
+* PhoneNumberFix (varchar(50)) - số đt cố định
 * Email (varchar(100)) - email đó
 * BankAccount (varchar(25)) - stk ngân hàng
 * BankName (varchar(255)) - tên ngân hàng

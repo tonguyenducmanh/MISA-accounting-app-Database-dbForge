@@ -471,7 +471,7 @@
         <RowsToGenerate>0</RowsToGenerate>
         <PopulationDetails>
           <PopulationType>RowsCount</PopulationType>
-          <RowsCount>500</RowsCount>
+          <RowsCount>1500</RowsCount>
           <LookupProportion>30</LookupProportion>
           <ProportionOfExistingData>10</ProportionOfExistingData>
           <TimeTicksToPopulate>100000000</TimeTicksToPopulate>
@@ -506,9 +506,9 @@
             <NullProportion>0</NullProportion>
             <ValueDistributionMode>Seed</ValueDistributionMode>
             <SeedValue>3</SeedValue>
-            <Unique>false</Unique>
+            <Unique>true</Unique>
             <IsAlwaysUnique>false</IsAlwaysUnique>
-            <Expression>NV\d{5}</Expression>
+            <Expression>NV\d{4}</Expression>
           </GeneratorOptions>
           <GeneratorType>MySqlStringRegularExpressionGenerator</GeneratorType>
           <GeneratorName>Reg Exp</GeneratorName>
@@ -537,7 +537,7 @@
         </Column>
         <Column Name="DateOfBirth">
           <Checked>true</Checked>
-          <DataType>DATETIME</DataType>
+          <DataType>DATE</DataType>
           <GeneratorOptions p6:type="BirthDateGeneratorOptions" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance">
             <AllowNulls>true</AllowNulls>
             <NullProportion>10</NullProportion>
@@ -564,7 +564,7 @@
               </WeightedListItem>
               <WeightedListItem>
                 <Value p6:type="BirthDateItem">
-                  <Checked>false</Checked>
+                  <Checked>true</Checked>
                   <Category>Students</Category>
                   <AgeRange>18-30</AgeRange>
                 </Value>
@@ -592,7 +592,7 @@
           <GeneratorDescription>fill with dates of birth for different age groups, e.g. for retired persons, adults, teenagers, etc.</GeneratorDescription>
           <GeneratorCategory>Personal</GeneratorCategory>
         </Column>
-        <Column Name="EmployeeGender">
+        <Column Name="Gender">
           <Checked>true</Checked>
           <DataType>TINYINT</DataType>
           <GeneratorOptions p6:type="MySqlTinyIntegerGeneratorOptions" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance">
@@ -691,44 +691,44 @@
           <GeneratorCategory>Location</GeneratorCategory>
           <Length>255</Length>
         </Column>
-        <Column Name="PNumRelative">
+        <Column Name="PhoneNumberRelative">
           <Checked>true</Checked>
           <DataType>VARCHAR</DataType>
           <GeneratorOptions p6:type="MySqlRegularExpressionGeneratorOptions" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance">
             <AllowEmptyStrings>false</AllowEmptyStrings>
             <EmptyStringProportion>10</EmptyStringProportion>
-            <AllowNulls>false</AllowNulls>
+            <AllowNulls>true</AllowNulls>
             <NullProportion>10</NullProportion>
             <ValueDistributionMode>Seed</ValueDistributionMode>
-            <SeedValue>6</SeedValue>
+            <SeedValue>3</SeedValue>
             <Unique>false</Unique>
             <IsAlwaysUnique>false</IsAlwaysUnique>
-            <Expression>09\d{8}</Expression>
+            <Expression>098\d{8}</Expression>
           </GeneratorOptions>
           <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
-          <GeneratorName>ID (random)</GeneratorName>
-          <GeneratorDescription>54470, 16912, 43814, 06728, 36017, 82433, 95664, ...</GeneratorDescription>
-          <GeneratorCategory>Business</GeneratorCategory>
+          <GeneratorName>Phone Number (domestic)</GeneratorName>
+          <GeneratorDescription>(102) 136-0584, (462) 681-9028, (252) 889-1273, ...</GeneratorDescription>
+          <GeneratorCategory>Personal</GeneratorCategory>
           <Length>50</Length>
         </Column>
-        <Column Name="PNumFix">
+        <Column Name="PhoneNumberFix">
           <Checked>true</Checked>
           <DataType>VARCHAR</DataType>
           <GeneratorOptions p6:type="MySqlRegularExpressionGeneratorOptions" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance">
             <AllowEmptyStrings>false</AllowEmptyStrings>
             <EmptyStringProportion>10</EmptyStringProportion>
-            <AllowNulls>false</AllowNulls>
+            <AllowNulls>true</AllowNulls>
             <NullProportion>10</NullProportion>
             <ValueDistributionMode>Seed</ValueDistributionMode>
-            <SeedValue>7</SeedValue>
+            <SeedValue>4</SeedValue>
             <Unique>false</Unique>
             <IsAlwaysUnique>false</IsAlwaysUnique>
-            <Expression>1((8)|(9))00\d{4}</Expression>
+            <Expression>098\d{6}</Expression>
           </GeneratorOptions>
           <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
-          <GeneratorName>ID (random)</GeneratorName>
-          <GeneratorDescription>54470, 16912, 43814, 06728, 36017, 82433, 95664, ...</GeneratorDescription>
-          <GeneratorCategory>Business</GeneratorCategory>
+          <GeneratorName>Phone Number (domestic)</GeneratorName>
+          <GeneratorDescription>(102) 136-0584, (462) 681-9028, (252) 889-1273, ...</GeneratorDescription>
+          <GeneratorCategory>Personal</GeneratorCategory>
           <Length>50</Length>
         </Column>
         <Column Name="Email">
@@ -1009,6 +1009,8 @@
   </Tables>
   <SynchronizationOptions p2:type="DataSyncOptionGroup" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance">
     <SynchronizationFileName>D:\fresher web MISA\MISA bài tập khối GPBL database design\DataGeneration_202209142300.sql</SynchronizationFileName>
+    <ExecuteCustomScriptTypeBefore>None UseEmbeddedScript</ExecuteCustomScriptTypeBefore>
+    <ExecuteCustomScriptTypeAfter>None UseEmbeddedScript</ExecuteCustomScriptTypeAfter>
     <BulkInsert>false</BulkInsert>
   </SynchronizationOptions>
 </DataGenDocument>

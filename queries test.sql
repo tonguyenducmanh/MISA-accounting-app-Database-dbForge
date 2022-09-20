@@ -8,7 +8,7 @@ SELECT
   e.EmployeeID,
   e.EmployeeCode,
   e.FullName,
-  e.EmployeeGender,
+  e.Gender,
   e.DateOfBirth,
   e.IdentityCard,
   e.PositionName,
@@ -18,7 +18,7 @@ SELECT
 FROM employee e
 WHERE ((e.EmployeeCode LIKE '%an%')
 OR (e.FullName LIKE '%an%')
-OR (e.PNumRelative LIKE '%an%'))
+OR (e.PhoneNumberRelative LIKE '%an%'))
 AND e.DepartmentID = '469b3ece-744a-45d5-957d-e8c757976496'
 AND e.PositionID = '71952621-23c8-61d2-d0eb-e423f1575e00'
 ORDER BY e.ModifiedDate DESC
@@ -38,13 +38,13 @@ SELECT
   e.EmployeeID,
   e.EmployeeCode,
   e.FullName,
-  e.EmployeeGender,
+  e.Gender,
   e.DateOfBirth,
   e.IdentityCard,
   e.IdentityPlace,
   e.Address,
-  e.PNumRelative,
-  e.PNumFix,
+  e.PhoneNumberRelative,
+  e.PhoneNumberFix,
   e.Email,
   e.PositionID,
   e.DepartmentID,
@@ -63,13 +63,13 @@ SELECT
   EmployeeID,
   EmployeeCode,
   FullName,
-  EmployeeGender,
+  Gender,
   DateOfBirth,
   IdentityCard,
   IdentityPlace,
   Address,
-  PNumRelative,
-  PNumFix,
+  PhoneNumberRelative,
+  PhoneNumberFix,
   Email,
   PositionID,
   DepartmentID,
@@ -88,7 +88,7 @@ FROM employee;
 
 -- Đề bài : Thêm 1 bản ghi mới vào employee
 
-INSERT employee (EmployeeID, EmployeeCode, FullName, DateOfBirth, EmployeeGender, IdentityCard, IdentityPlace, Address, PNumRelative, PNumFix, Email, BankAccount, BankName, BankBranch, DepartmentID, DepartmentName, PositionID, PositionName, CreatedDate, CreatedBy, ModifiedDate, ModifiedBy)
+INSERT employee (EmployeeID, EmployeeCode, FullName, DateOfBirth, Gender, IdentityCard, IdentityPlace, Address, PhoneNumberRelative, PhoneNumberFix, Email, BankAccount, BankName, BankBranch, DepartmentID, DepartmentName, PositionID, PositionName, CreatedDate, CreatedBy, ModifiedDate, ModifiedBy)
   VALUES (UUID(), 'NV12345', 'Tô Nguyễn Đức Mạnh', 14 / 03 / 2000, 0, '12312124124', 'CA Thái Bình', 'Thái Bình', '0981071321', '0129211291', 'ducmanh14032000@gmail.com', '1209321031', 'BIDV', 'Cầu Giấy', '11452b0c-768e-5ff7-0d63-eeb1d8ed8cef', 'Phòng Hành Chính', '39446ba3-3071-7af6-a5a9-deaf32c96293', 'Giám đốc', NOW(), 'Bùi Thúy Quỳnh', NOW(), 'Bùi Thúy Quỳnh');
 
 
@@ -103,12 +103,12 @@ UPDATE employee e
 SET EmployeeCode = '',
     FullName = '',
     DateOfBirth = NOW(),
-    EmployeeGender = 0,
+    Gender = 0,
     IdentityCard = '',
     IdentityPlace = '',
     Address = '',
-    PNumRelative = '',
-    PNumFix = '',
+    PhoneNumberRelative = '',
+    PhoneNumberFix = '',
     Email = '',
     BankAccount = '',
     BankName = '',
