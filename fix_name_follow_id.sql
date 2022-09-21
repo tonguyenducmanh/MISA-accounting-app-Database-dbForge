@@ -18,7 +18,7 @@ WHERE e.PositionID = '447816de-6069-15bf-de3d-c9e9e9038fe2';
 
 UPDATE employee e
 SET e.PositionName = 'Nhân viên'
-WHERE e.PositionID = '79aca385-65e3-1ebe-f488-479bce9b28fcc';
+WHERE e.PositionID = '79aca385-65e3-1ebe-f488-479bce9b28fc';
 
 UPDATE employee e
 SET e.PositionName = 'Thực tập sinh'

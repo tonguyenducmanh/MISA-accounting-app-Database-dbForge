@@ -32,7 +32,7 @@ COMMENT '
   -- Created date: 15/09/2022
   -- Description: Sủa 1 nhân viên có sẵn trong bảng employee
   -- Modified by:
-  -- Code chạy thử Call Proc_employee_EditOne("...");                   
+  -- Code chạy thử Call Proc_employee_PutOne("...");                   
   '
 BEGIN
   UPDATE employee e
@@ -42,6 +42,7 @@ BEGIN
       Gender = v_Gender,
       EmployeeType = v_EmployeeType,
       IdentityCard = v_IdentityCard,
+      IdentityDate = v_IdentityDate,
       IdentityPlace = v_IdentityDate,
       Address = v_Address,
       PhoneNumberRelative = v_PhoneNumberRelative,

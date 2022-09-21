@@ -35,11 +35,11 @@ COMMENT '
   -- Created date: 15/09/2022
   -- Description: Thêm 1 nhân viên mới vào trong bảng employee
   -- Modified by:
-  -- Code chạy thử Call Proc_employee_InsertOne("...");                      
+  -- Code chạy thử Call Proc_employee_PostOne("...");                      
   '
 BEGIN
-  INSERT employee (EmployeeID, EmployeeCode, FullName, DateOfBirth, Gender, EmployeeType, IdentityCard, IdentityPlace, Address, PhoneNumberRelative, PhoneNumberFix, Email, BankAccount, BankName, BankBranch, DepartmentID, DepartmentName, PositionID, PositionName, CreatedDate, CreatedBy, ModifiedDate, ModifiedBy)
-    VALUES (UUID(), v_EmployeeCode, v_FullName, v_DateOfBirth, v_Gender, v_EmployeeType, v_IdentityCard, v_IdentityPlace, v_Address, v_PhoneNumberRelative, v_PhoneNumberFix, v_Email, v_BankAccount, v_BankName, v_BankBranch, v_DepartmentID, v_DepartmentName, v_PositionID, v_PositionName, v_CreatedDate, v_CreatedBy, v_ModifiedDate, v_ModifiedBy);
+  INSERT employee (EmployeeID, EmployeeCode, FullName, DateOfBirth, Gender, EmployeeType, IdentityCard, IdentityDate, IdentityPlace, Address, PhoneNumberRelative, PhoneNumberFix, Email, BankAccount, BankName, BankBranch, DepartmentID, DepartmentName, PositionID, PositionName, CreatedDate, CreatedBy, ModifiedDate, ModifiedBy)
+    VALUES (UUID(), v_EmployeeCode, v_FullName, v_DateOfBirth, v_Gender, v_EmployeeType, v_IdentityCard, v_IdentityDate, v_IdentityPlace, v_Address, v_PhoneNumberRelative, v_PhoneNumberFix, v_Email, v_BankAccount, v_BankName, v_BankBranch, v_DepartmentID, v_DepartmentName, v_PositionID, v_PositionName, v_CreatedDate, v_CreatedBy, v_ModifiedDate, v_ModifiedBy);
 
 END
 $$
