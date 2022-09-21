@@ -6,8 +6,8 @@ DELIMITER $$
 
 CREATE
 DEFINER = 'root'@'localhost'
-PROCEDURE Proc_employee_PostOne (-- ID nhân viên
-IN v_EmployeeCode varchar(20), -- ID nhân viên
+PROCEDURE Proc_employee_PostOne (IN v_EmployeeID char(36), -- ID nhân viên
+IN v_EmployeeCode varchar(20), -- mã nhân viên
 IN v_FullName varchar(100), -- tên nhân viên
 IN v_DateOfBirth datetime, -- ngày sinh nhân viên
 IN v_Gender tinyint, -- giới tính nhân viên
@@ -39,7 +39,7 @@ COMMENT '
   '
 BEGIN
   INSERT employee (EmployeeID, EmployeeCode, FullName, DateOfBirth, Gender, EmployeeType, IdentityCard, IdentityDate, IdentityPlace, Address, PhoneNumberRelative, PhoneNumberFix, Email, BankAccount, BankName, BankBranch, DepartmentID, DepartmentName, PositionID, PositionName, CreatedDate, CreatedBy, ModifiedDate, ModifiedBy)
-    VALUES (UUID(), v_EmployeeCode, v_FullName, v_DateOfBirth, v_Gender, v_EmployeeType, v_IdentityCard, v_IdentityDate, v_IdentityPlace, v_Address, v_PhoneNumberRelative, v_PhoneNumberFix, v_Email, v_BankAccount, v_BankName, v_BankBranch, v_DepartmentID, v_DepartmentName, v_PositionID, v_PositionName, v_CreatedDate, v_CreatedBy, v_ModifiedDate, v_ModifiedBy);
+    VALUES (v_EmployeeID, v_EmployeeCode, v_FullName, v_DateOfBirth, v_Gender, v_EmployeeType, v_IdentityCard, v_IdentityDate, v_IdentityPlace, v_Address, v_PhoneNumberRelative, v_PhoneNumberFix, v_Email, v_BankAccount, v_BankName, v_BankBranch, v_DepartmentID, v_DepartmentName, v_PositionID, v_PositionName, v_CreatedDate, v_CreatedBy, v_ModifiedDate, v_ModifiedBy);
 
 END
 $$
