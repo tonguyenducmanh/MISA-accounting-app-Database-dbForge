@@ -704,7 +704,7 @@
           <GeneratorCategory>Location</GeneratorCategory>
           <Length>255</Length>
         </Column>
-        <Column Name="PhoneNumberRelative">
+        <Column Name="MobilePhone">
           <Checked>true</Checked>
           <DataType>VARCHAR</DataType>
           <GeneratorOptions p6:type="MySqlRegularExpressionGeneratorOptions" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance">
@@ -716,7 +716,7 @@
             <SeedValue>3</SeedValue>
             <Unique>false</Unique>
             <IsAlwaysUnique>false</IsAlwaysUnique>
-            <Expression>098\d{8}</Expression>
+            <Expression>098\d{7}</Expression>
           </GeneratorOptions>
           <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
           <GeneratorName>Phone Number (domestic)</GeneratorName>
@@ -724,7 +724,7 @@
           <GeneratorCategory>Personal</GeneratorCategory>
           <Length>50</Length>
         </Column>
-        <Column Name="PhoneNumberFix">
+        <Column Name="Telephone">
           <Checked>true</Checked>
           <DataType>VARCHAR</DataType>
           <GeneratorOptions p6:type="MySqlRegularExpressionGeneratorOptions" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance">
@@ -736,7 +736,7 @@
             <SeedValue>4</SeedValue>
             <Unique>false</Unique>
             <IsAlwaysUnique>false</IsAlwaysUnique>
-            <Expression>098\d{6}</Expression>
+            <Expression>190\d{7}</Expression>
           </GeneratorOptions>
           <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
           <GeneratorName>Phone Number (domestic)</GeneratorName>
