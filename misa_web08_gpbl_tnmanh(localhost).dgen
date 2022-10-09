@@ -102,36 +102,21 @@
         <Column Name="Description">
           <Checked>true</Checked>
           <DataType>VARCHAR</DataType>
-          <GeneratorOptions p6:type="MySqlLoremIpsumGeneratorOptions" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance">
+          <GeneratorOptions p6:type="MySqlRegularExpressionGeneratorOptions" xmlns:p6="http://www.w3.org/2001/XMLSchema-instance">
             <AllowEmptyStrings>false</AllowEmptyStrings>
-            <EmptyStringProportion>0</EmptyStringProportion>
+            <EmptyStringProportion>10</EmptyStringProportion>
             <AllowNulls>true</AllowNulls>
             <NullProportion>10</NullProportion>
             <ValueDistributionMode>Seed</ValueDistributionMode>
             <SeedValue>1</SeedValue>
-            <MinLength>1</MinLength>
-            <MaxLength>199</MaxLength>
-            <MaxAllowedLength>255</MaxAllowedLength>
-            <MinWordsInSentence>3</MinWordsInSentence>
-            <MaxWordsInSentence>7</MaxWordsInSentence>
-            <MinSentences>1</MinSentences>
-            <MaxSentences>10</MaxSentences>
-            <MinParagraphs>1</MinParagraphs>
-            <MaxParagraphs>1</MaxParagraphs>
             <Unique>false</Unique>
             <IsAlwaysUnique>false</IsAlwaysUnique>
-            <PunctuationSigns>,.!?...;</PunctuationSigns>
-            <StartParagraphWithIndent>false</StartParagraphWithIndent>
-            <AddParagraphTags>false</AddParagraphTags>
-            <AddItalicTags>false</AddItalicTags>
-            <AddBoldTags>false</AddBoldTags>
-            <AddSingleLineBreakTags>false</AddSingleLineBreakTags>
-            <AddNewLines>false</AddNewLines>
+            <Expression>(Phòng làm việc chính của đội ngũ thiết kế)|(Phòng làm việc của đội ngũ lập trình viên)|(Phòng làm việc của đội ngũ sản xuất sản phẩm)|(Phòng làm việc của đội ngũ nhân sự)|(Phòng làm việc của bộ phận nghiên cứu công nghệ)</Expression>
           </GeneratorOptions>
-          <GeneratorType>MySqlLoremIpsumGenerator</GeneratorType>
-          <GeneratorName>Product Description</GeneratorName>
-          <GeneratorDescription>Sunt id voluptatem eveniet ipsum minus hic. Repellenadus at facilis. Aut facilis esse qui, eligendi et quae! Et qui ullam., ...</GeneratorDescription>
-          <GeneratorCategory>Product</GeneratorCategory>
+          <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
+          <GeneratorName>Full Name</GeneratorName>
+          <GeneratorDescription>Malik Whitmore, Sherill Gaskin, Rigoberto Mundy, Joelle Childers, Vanna Doss, ...</GeneratorDescription>
+          <GeneratorCategory>Personal</GeneratorCategory>
           <Length>255</Length>
         </Column>
         <Column Name="CreatedDate">
@@ -181,7 +166,7 @@
             <SeedValue>1</SeedValue>
             <Unique>false</Unique>
             <IsAlwaysUnique>false</IsAlwaysUnique>
-            <Expression>($"VNHo.txt") (($"VNDemNam.txt") ($"VNTenNam.txt")) | (($"VNDemNu.txt") ($"VNTenNu.txt"))</Expression>
+            <Expression>($"vnho.txt") ((($"vndemnam.txt") ($"vntennam.txt"))|(($"vndemnu.txt") ($"vntennu.txt")))</Expression>
           </GeneratorOptions>
           <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
           <GeneratorName>Full Name</GeneratorName>
@@ -236,7 +221,7 @@
             <SeedValue>2</SeedValue>
             <Unique>false</Unique>
             <IsAlwaysUnique>false</IsAlwaysUnique>
-            <Expression>($"vnho.txt") (($"vndemnam.txt") ($"vntennam.txt")) | (($"vndemnu.txt") ($"vntennu.txt"))</Expression>
+            <Expression>($"vnho.txt") ((($"vndemnam.txt") ($"vntennam.txt"))|(($"vndemnu.txt") ($"vntennu.txt")))</Expression>
           </GeneratorOptions>
           <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
           <GeneratorName>Full Name</GeneratorName>
@@ -309,7 +294,7 @@
             <SeedValue>3</SeedValue>
             <Unique>false</Unique>
             <IsAlwaysUnique>false</IsAlwaysUnique>
-            <Expression>($"vnho.txt") (($"vndemnam.txt") ($"vntennam.txt")) | (($"vndemnu.txt") ($"vntennu.txt"))</Expression>
+            <Expression>($"vnho.txt") ((($"vndemnam.txt") ($"vntennam.txt"))|(($"vndemnu.txt") ($"vntennu.txt")))</Expression>
           </GeneratorOptions>
           <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
           <GeneratorName>Full Name</GeneratorName>
@@ -598,7 +583,7 @@
             <SeedValue>4</SeedValue>
             <Unique>false</Unique>
             <IsAlwaysUnique>false</IsAlwaysUnique>
-            <Expression> Phía ((Đông)|(Tây)|(Nam)|(Bắc))</Expression>
+            <Expression>(Chi nhánh Cầu Giấy Hà Nội)|(Chi nhánh Thanh Xuân Hà Nội)|(Chi nhánh Quỳnh Phụ Thái Bình)|(Chi nhánh Sóc Sơn Hà Nội)|(Chi nhánh Ba Đình Hà Nội)|(Chi nhánh Tiền Hải Thái Bình)|(Chi nhánh Tây Hồ Hà Nội)</Expression>
           </GeneratorOptions>
           <GeneratorType>MySqlStringRegularExpressionGenerator</GeneratorType>
           <GeneratorName>Reg Exp</GeneratorName>
@@ -659,7 +644,7 @@
             <SeedValue>3</SeedValue>
             <Unique>false</Unique>
             <IsAlwaysUnique>false</IsAlwaysUnique>
-            <Expression>((($"FirstNamesMale.txt")|($"FirstNamesFemale.txt")|($"LastNames.txt"))(\D{1,3}))|((($"FirstNamesMale.txt")|($"FirstNamesFemale.txt")|($"LastNames.txt"))((19[5-9]\d)|(20[0-2]\d)))</Expression>
+            <Expression>(giám đốc)|(trưởng phòng)|(phó phòng)|(chủ tịch)|(phó giám đốc)|(lập trình viên)|(kế toán)|(quản lý nhân sự)|(designer)</Expression>
           </GeneratorOptions>
           <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
           <GeneratorName>NickName</GeneratorName>
@@ -714,7 +699,7 @@
             <SeedValue>4</SeedValue>
             <Unique>false</Unique>
             <IsAlwaysUnique>false</IsAlwaysUnique>
-            <Expression>($"vnho.txt") (($"vndemnam.txt") ($"vntennam.txt")) | (($"vndemnu.txt") ($"vntennu.txt"))</Expression>
+            <Expression>($"vnho.txt") ((($"vndemnam.txt") ($"vntennam.txt"))|(($"vndemnu.txt") ($"vntennu.txt")))</Expression>
           </GeneratorOptions>
           <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
           <GeneratorName>Full Name</GeneratorName>
@@ -769,7 +754,7 @@
             <SeedValue>5</SeedValue>
             <Unique>false</Unique>
             <IsAlwaysUnique>false</IsAlwaysUnique>
-            <Expression>($"vnho.txt") (($"vndemnam.txt") ($"vntennam.txt")) | (($"vndemnu.txt") ($"vntennu.txt"))</Expression>
+            <Expression>($"vnho.txt") ((($"vndemnam.txt") ($"vntennam.txt"))|(($"vndemnu.txt") ($"vntennu.txt")))</Expression>
           </GeneratorOptions>
           <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
           <GeneratorName>Full Name</GeneratorName>
